@@ -1,0 +1,149 @@
+@startuml Comp 4 Assignment 2
+
+rectangle Package1 {
+    class WheeledTransportation {
+    - int numWheels
+    - double maxSpeed
+
+    ~ WheeledTransportation(int numWheels, double maxSpeed)
+    ~ WheeledTransportation(WheeledTransportation other)
+    ~ WheeledTransportation()
+    + void setNumWheels(int newNumWheels)
+    + int getNumWheels()
+    + void setMaxSpeed(double newMaxSpeed)
+    + double getMaxSpeed()
+    + String toString()
+    ~ boolean equals(Object o)
+    }
+}
+
+rectangle Package2 {
+    class Train {
+    - int numVehicles
+    - String startStation
+    - String endStation
+
+    ~ Train(int numWheels, int maxSpeed, int numVehicles, String startStation, String endStation)
+    ~ Train(Train other)
+    ~ Train()
+
+    + void setNumVehicles(int newNumVehicles)
+    + int getNumVehicles()
+    + void setStartStation(String newStartStation)
+    + String getStartStation()
+    + void setEndStation(String newEndStation)
+    + String getEndStation()
+
+    + String toString()
+    ~ boolean equals(Object o)
+    }
+
+    class Tram{
+        - int creationYear
+
+        + Tram(int numWheels, int maxSpeed, int numVehicles, String startStation, String endStation, int totStops, int creationYear)
+        + Tram(Tram other)
+        + Tram()
+
+        + void setCreationYear(int newCreationYear)
+        + int getCreationYear()
+
+        + String toString()
+        + boolean equals(Object o)
+    }
+}
+
+rectangle Package3 {
+    class Metro {
+    - int totStops
+
+    ~ Metro(int numWheels, int maxSpeed, int numVehicles, String startStation, String endStation, int totStops)
+    ~ Metro(Metro other)
+    ~ Metro()
+
+    + void setTotStops(int newTotStops)
+    + int getTotStops()
+
+    + String toString()
+    ~ boolean equals(Object o)
+    }
+}
+
+rectangle Package4 {
+    class Monowheel{
+    - double maxWeight
+
+    + Monowheel(int numWheels, int maxSpeed, double maxWeight)
+    + Monowheel(Monowheel other)
+    + Monowheel()
+
+    + void setMaxWeight(double newMaxWeight)
+    + double getMaxWeight()
+
+    + String toString()
+    + boolean equals(Object o)
+    }
+}
+
+rectangle Package5 {
+    class Ferry{
+    - double maxSpeed
+    - double maxLoad
+
+    + Ferry(int maxSpeed, double maxLoad)
+    + Ferry(Ferry other)
+    + Ferry()
+
+    + void setMaxSpeed(double newMaxSpeed)
+    + double getMaxSpeed()
+    + void setMaxLoad(double newMaxLoad)
+    + double getMaxLoad()
+
+    + String toString()
+    + boolean equals(Object o)
+    }
+}
+
+rectangle Package6 {
+    class Aircraft{
+    - double price
+    - double maxElev
+
+    ~ Aircraft(double price, double maxElev)
+    ~ Aircraft(Aircraft other)
+    ~ Aircraft()
+
+    + void setPrice(double newPrice)
+    + double getPrice()
+    + void setMaxElev(double newMaxElev)
+    + double getMaxElev()
+
+    + String toString()
+    ~ boolean equals(Object o)
+    }
+
+    class WorldWarIIAirplane{
+    - boolean twin
+
+    + WorldWarIIAirplane(double price, double maxElev, boolean twin)
+    + WorldWarIIAirplane(WorldWarIIAirplane other)
+    + WorldWarIIAirplane()
+
+    + void setTwin(boolean newTwin)
+    + boolean getTwin()
+
+    + String toString()
+    + boolean equals(Object o)
+    }
+}
+
+
+
+
+WheeledTransportation <|-- Train 
+Train <|-- Metro
+Metro <|-- Tram
+WheeledTransportation <|-- Monowheel
+Aircraft <|-- WorldWarIIAirplane
+
+@enduml
