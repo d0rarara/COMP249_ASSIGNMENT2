@@ -1,3 +1,9 @@
+// Dorcas Kumbu Buthidi 40224424
+// COMP249
+// Assignment 2
+// Part 1
+// Due Date: March 4, 2023 
+
 package Part1.Package1;
 
 /**
@@ -81,7 +87,10 @@ public class WheeledTransportation {
      * @return A string representation of the object
      */
     public String toString() {
-        return "This wheeled transportation has " + numWheels + " wheels and a maximum speed of " + maxSpeed + " km/h.";
+        if(numWheels == 0 || maxSpeed == 0){
+            return "\nSince no wheeled transportation has been selected, the number of wheels and the maximum speed have been \nset to " + numWheels + " and " + maxSpeed + ".";
+        }
+        return "\nThis wheeled transportation has " + numWheels + " wheels and a maximum speed of " + maxSpeed + " km/h.";
     }
 
     /**

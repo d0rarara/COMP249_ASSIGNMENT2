@@ -1,3 +1,9 @@
+// Dorcas Kumbu Buthidi 40224424
+// COMP249
+// Assignment 2
+// Part 1
+// Due Date: March 4, 2023 
+
 package Part1.Package5;
 
 /**
@@ -63,7 +69,11 @@ public class WorldWarIIAirplane extends Aircraft{
      * @return A string representation of the object
      */
     public String toString() {
-        return "This World War II airplane costs $" + getPrice() + ", has a maximum elevation of " + getMaxElev() + " m, and is " + (twin ? "twin-engine" : "single-engine") + ".";
+        if(getPrice() == 0 || getMaxElev() == 0){
+            return "\nSince no World War II airplane has been selected, the price and the maximum elevation are set to 0. \nNo info available for engine type.";
+
+        }
+        return "\nThis World War II airplane costs $" + getPrice() + ", has a maximum elevation of " + getMaxElev() + " m, and is " + (twin ? "twin-engine" : "single-engine") + ".";
     }
 
     /**

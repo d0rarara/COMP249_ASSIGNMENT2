@@ -1,3 +1,9 @@
+// Dorcas Kumbu Buthidi 40224424
+// COMP249
+// Assignment 2
+// Part 1
+// Due Date: March 4, 2023 
+
 package Part1.Package3;
 
 import Part1.Package2.Train;
@@ -67,7 +73,10 @@ public class Metro extends Train {
      * @return The number of stops the metro makes per vehicle
      */
     public String toString() {
-        return "This metro has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + getNumVehicles() + " vehicles, travels from " + getStartStation() + " to " + getEndStation() + ", and has " + totStops + " stops.";
+        if(getNumVehicles() == 0){
+            return "\nSince no metro has been selected, the number of wheels, the maximum speed, and the number of venhicles \nare set to 0. Travelling does not occur. There are 0 stops and no creation year.";
+        }
+        return "\nThis metro has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + getNumVehicles() + " vehicles, travels from " + getStartStation() + " to " + getEndStation() + ", \nand has " + totStops + " stops.";
     }
 
     /**
