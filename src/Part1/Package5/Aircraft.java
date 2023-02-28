@@ -12,8 +12,8 @@ package Part1.Package5;
  * @author  Dorcas
  */
 public class Aircraft {
-    private double price;
-    private double maxElev;
+    double price;
+    double maxElev; // package access
 
     /**
      * Default constructor for objects of class Aircraft

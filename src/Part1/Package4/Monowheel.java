@@ -71,10 +71,10 @@ public class Monowheel extends WheeledTransportation {
      * @return A string representation of the object
      */
     public String toString() {
-        if(getNumWheels() == 0){
+        if(numWheels == 0){
             return "\nSince no monowheel has been selected, the number of wheels and the maximum speed are set to 0.";
         }
-        return "\nThis monowheel has " + getNumWheels() + " wheel, a maximum speed of " + getMaxSpeed() + " km/h, and a maximum weight of " + maxWeight + " kg.";
+        return "\nThis monowheel has " + numWheels + " wheel, a maximum speed of " + maxSpeed + " km/h, and a maximum weight of " + maxWeight + " kg.";
     }
 
     /**
@@ -88,7 +88,7 @@ public class Monowheel extends WheeledTransportation {
             return false;
         } else {
             Monowheel other = (Monowheel) o;
-            return getNumWheels() == other.getNumWheels() && getMaxSpeed() == other.getMaxSpeed() && maxWeight == other.maxWeight;
+            return numWheels == other.numWheels && maxSpeed == other.maxSpeed && maxWeight == other.maxWeight;
         }
     }
     

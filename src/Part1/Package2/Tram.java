@@ -75,10 +75,10 @@ public class Tram extends Metro {
      * @return A string representation of the object
      */
     public String toString() {
-        if(getNumVehicles() == 0){
+        if(numVehicles == 0){
             return "\nSince no tram has been selected, the number of wheels, the maximum speed, and the number of venhicles \nare set to 0. Travelling does not occur. There are 0 stops and no creation year.";
         }
-        return "\nThis tram has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + getNumVehicles() + " vehicles, travels from " + getStartStation() + " to " + getEndStation() + ", \nhas " + getTotStops() + " stops, and was created in " + creationYear + ".";
+        return "\nThis tram has " + numWheels + " wheels, a maximum speed of " + maxSpeed + " km/h, " + numVehicles + " vehicles, travels from " + startStation + " to " + endStation + ", \nhas " + totStops + " stops, and was created in " + creationYear + ".";
     }
 
     /**

@@ -1,31 +1,33 @@
 @startuml Comp 4 Assignment 2
 
+!theme cerulean-outline
+
 rectangle Package1 {
     class WheeledTransportation {
-    - int numWheels
-    - double maxSpeed
+    # int numWheels
+    # double maxSpeed
 
-    ~ WheeledTransportation(int numWheels, double maxSpeed)
-    ~ WheeledTransportation(WheeledTransportation other)
-    ~ WheeledTransportation()
+    + WheeledTransportation(int numWheels, double maxSpeed)
+    + WheeledTransportation(WheeledTransportation other)
+    + WheeledTransportation()
     + void setNumWheels(int newNumWheels)
     + int getNumWheels()
     + void setMaxSpeed(double newMaxSpeed)
     + double getMaxSpeed()
     + String toString()
-    ~ boolean equals(Object o)
+    + boolean equals(Object o)
     }
 }
 
 rectangle Package2 {
     class Train {
-    - int numVehicles
-    - String startStation
-    - String endStation
+    # int numVehicles
+    # String startStation
+    # String endStation
 
-    ~ Train(int numWheels, int maxSpeed, int numVehicles, String startStation, String endStation)
-    ~ Train(Train other)
-    ~ Train()
+    + Train(int numWheels, int maxSpeed, int numVehicles, String startStation, String endStation)
+    + Train(Train other)
+    + Train()
 
     + void setNumVehicles(int newNumVehicles)
     + int getNumVehicles()
@@ -35,7 +37,7 @@ rectangle Package2 {
     + String getEndStation()
 
     + String toString()
-    ~ boolean equals(Object o)
+    + boolean equals(Object o)
     }
 
     class Tram{
@@ -55,17 +57,17 @@ rectangle Package2 {
 
 rectangle Package3 {
     class Metro {
-    - int totStops
+    # int totStops
 
-    ~ Metro(int numWheels, int maxSpeed, int numVehicles, String startStation, String endStation, int totStops)
-    ~ Metro(Metro other)
-    ~ Metro()
+    + Metro(int numWheels, int maxSpeed, int numVehicles, String startStation, String endStation, int totStops)
+    + Metro(Metro other)
+    + Metro()
 
     + void setTotStops(int newTotStops)
     + int getTotStops()
 
     + String toString()
-    ~ boolean equals(Object o)
+    + boolean equals(Object o)
     }
 }
 
@@ -106,12 +108,12 @@ rectangle Package5 {
 
 rectangle Package6 {
     class Aircraft{
-    - double price
-    - double maxElev
+    ~ double price
+    ~ double maxElev
 
-    ~ Aircraft(double price, double maxElev)
-    ~ Aircraft(Aircraft other)
-    ~ Aircraft()
+    + Aircraft(double price, double maxElev)
+    + Aircraft(Aircraft other)
+    + Aircraft()
 
     + void setPrice(double newPrice)
     + double getPrice()
@@ -119,7 +121,7 @@ rectangle Package6 {
     + double getMaxElev()
 
     + String toString()
-    ~ boolean equals(Object o)
+    + boolean equals(Object o)
     }
 
     class WorldWarIIAirplane{

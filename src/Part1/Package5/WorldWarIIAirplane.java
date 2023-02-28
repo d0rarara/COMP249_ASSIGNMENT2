@@ -11,7 +11,7 @@ package Part1.Package5;
  * 
  * @author  Dorcas
  */
-public class WorldWarIIAirplane extends Aircraft{
+public class WorldWarIIAirplane extends Aircraft {
     private boolean twin;
 
     /**
@@ -69,11 +69,11 @@ public class WorldWarIIAirplane extends Aircraft{
      * @return A string representation of the object
      */
     public String toString() {
-        if(getPrice() == 0 || getMaxElev() == 0){
+        if(price == 0 || maxElev == 0){
             return "\nSince no World War II airplane has been selected, the price and the maximum elevation are set to 0. \nNo info available for engine type.";
 
         }
-        return "\nThis World War II airplane costs $" + getPrice() + ", has a maximum elevation of " + getMaxElev() + " m, and is " + (twin ? "twin-engine" : "single-engine") + ".";
+        return "\nThis World War II airplane costs $" + price + ", has a maximum elevation of " + maxElev + " m, and is " + (twin ? "twin-engine" : "single-engine") + ".";
     }
 
     /**
@@ -87,7 +87,7 @@ public class WorldWarIIAirplane extends Aircraft{
             return false;
         } else {
             WorldWarIIAirplane other = (WorldWarIIAirplane) o;
-            return getPrice() == other.getPrice() && getMaxElev() == other.getMaxElev() && twin == other.twin;
+            return price == other.price && maxElev == other.maxElev && twin == other.twin;
         }
     }
 }

@@ -14,7 +14,7 @@ import Part1.Package2.Train;
  * @author  Dorcas
  */
 public class Metro extends Train {
-    private int totStops;
+    protected int totStops;
 
     /**
      * Default constructor for objects of class Metro
@@ -73,10 +73,10 @@ public class Metro extends Train {
      * @return The number of stops the metro makes per vehicle
      */
     public String toString() {
-        if(getNumVehicles() == 0){
+        if(numVehicles == 0){
             return "\nSince no metro has been selected, the number of wheels, the maximum speed, and the number of venhicles \nare set to 0. Travelling does not occur. There are 0 stops and no creation year.";
         }
-        return "\nThis metro has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + getNumVehicles() + " vehicles, travels from " + getStartStation() + " to " + getEndStation() + ", \nand has " + totStops + " stops.";
+        return "\nThis metro has " + numWheels + " wheels, a maximum speed of " + maxSpeed + " km/h, " + numVehicles + " vehicles, travels from " + startStation + " to " + endStation + ", \nand has " + totStops + " stops.";
     }
 
     /**
