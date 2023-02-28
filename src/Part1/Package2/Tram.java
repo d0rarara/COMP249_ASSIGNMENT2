@@ -1,3 +1,9 @@
+// Dorcas Kumbu Buthidi 40224424
+// COMP249
+// Assignment 2
+// Part 1
+// Due Date: March 4, 2023 
+
 package Part1.Package2;
 
 import Part1.Package3.Metro;
@@ -69,7 +75,10 @@ public class Tram extends Metro {
      * @return A string representation of the object
      */
     public String toString() {
-        return "This tram has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + getNumVehicles() + " vehicles, travels from " + getStartStation() + " to " + getEndStation() + ", has " + getTotStops() + " stops, and was created in " + creationYear + ".";
+        if(getNumVehicles() == 0){
+            return "\nSince no tram has been selected, the number of wheels, the maximum speed, and the number of venhicles \nare set to 0. Travelling does not occur. There are 0 stops and no creation year.";
+        }
+        return "\nThis tram has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + getNumVehicles() + " vehicles, travels from " + getStartStation() + " to " + getEndStation() + ", \nhas " + getTotStops() + " stops, and was created in " + creationYear + ".";
     }
 
     /**

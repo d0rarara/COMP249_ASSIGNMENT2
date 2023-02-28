@@ -1,3 +1,9 @@
+// Dorcas Kumbu Buthidi 40224424
+// COMP249
+// Assignment 2
+// Part 1
+// Due Date: March 4, 2023 
+
 package Part1.Package2;
 
 import Part1.Package1.WheeledTransportation;
@@ -111,8 +117,12 @@ public class Train extends WheeledTransportation {
      * @return A string representation of the train
      */
     public String toString() {
-        return "This train has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + numVehicles + " vehicles, and travels from " + startStation + " to " + endStation + ".";
+        if(numVehicles == 0){
+            return "\nSince no train has been selected, the number of wheels, the maximum speed, and the number of venhicles \nare set to 0. Travelling does not occur.";
+        }
+        return "\nThis train has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + numVehicles + " vehicles, and travels from " + startStation + " \nto " + endStation + ".";
     }
+
 
     /**
      * Checks if two trains are equal

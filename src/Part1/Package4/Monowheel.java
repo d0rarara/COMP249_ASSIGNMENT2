@@ -1,3 +1,9 @@
+// Dorcas Kumbu Buthidi 40224424
+// COMP249
+// Assignment 2
+// Part 1
+// Due Date: March 4, 2023 
+
 package Part1.Package4;
 
 import Part1.Package1.WheeledTransportation;
@@ -65,7 +71,10 @@ public class Monowheel extends WheeledTransportation {
      * @return A string representation of the object
      */
     public String toString() {
-        return "This monowheel has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, and a maximum weight of " + maxWeight + " kg.";
+        if(getNumWheels() == 0){
+            return "\nSince no monowheel has been selected, the number of wheels and the maximum speed are set to 0.";
+        }
+        return "\nThis monowheel has " + getNumWheels() + " wheel, a maximum speed of " + getMaxSpeed() + " km/h, and a maximum weight of " + maxWeight + " kg.";
     }
 
     /**

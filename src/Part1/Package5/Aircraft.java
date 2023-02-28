@@ -1,3 +1,9 @@
+// Dorcas Kumbu Buthidi 40224424
+// COMP249
+// Assignment 2
+// Part 1
+// Due Date: March 4, 2023 
+
 package Part1.Package5;
 
 /**
@@ -81,7 +87,10 @@ public class Aircraft {
      * @return A string representation of the object
      */
     public String toString() {
-        return "This aircraft costs $" + price + " and has a maximum elevation of " + maxElev + " m.";
+        if(price == 0){
+            return "\nSince no aircraft has been selected, the price and the maximum elevation are set to 0.";
+        }
+        return "\nThis aircraft costs $" + price + " and has a maximum elevation of " + maxElev + " m.";
     }
 
     /**

@@ -1,3 +1,9 @@
+// Dorcas Kumbu Buthidi 40224424
+// COMP249
+// Assignment 2
+// Part 1
+// Due Date: March 4, 2023 
+
 package Part1.Package6;
 
 import Part1.Package1.WheeledTransportation;
@@ -9,7 +15,16 @@ import Part1.Package5.Aircraft;
 import Part1.Package5.WorldWarIIAirplane;
 
 public class Driver{
+    /**
+     * 
+     * @param args
+     */
+
     public static void main(String args[]){
+        /**
+         * This is the main method of the program
+         */
+
         WheeledTransportation w1 = new WheeledTransportation();
         WheeledTransportation w2 = new WheeledTransportation(4, 100.0);
         WheeledTransportation w3 = new WheeledTransportation(w2);
@@ -51,7 +66,7 @@ public class Driver{
         System.out.println(mo3);
 
         Aircraft a1 = new Aircraft();
-        Aircraft a2 = new Aircraft(3, 1000.0);
+        Aircraft a2 = new Aircraft(20000, 1000.0);
         Aircraft a3 = new Aircraft(a2);
         
         System.out.println(a1);
@@ -59,7 +74,7 @@ public class Driver{
         System.out.println(a3);
 
         WorldWarIIAirplane ww1 = new WorldWarIIAirplane();
-        WorldWarIIAirplane ww2 = new WorldWarIIAirplane(0, 0, false);
+        WorldWarIIAirplane ww2 = new WorldWarIIAirplane(50000, 3000.0, false);
         WorldWarIIAirplane ww3 = new WorldWarIIAirplane(ww2);
 
         System.out.println(ww1);
@@ -83,32 +98,40 @@ public class Driver{
         System.out.println(t1.equals(t2));
         System.out.println(w1.equals(tr1));
 
-        Object[] arr1 = new Object[]{w1, w2, w3, t2, t3, tr1, tr2, tr3, m1, m2, m3, mo2, mo3, a1, a2, a3, ww2, ww3, f1, f2};
+        Object[] arr1 = new Object[]{w1, w2, w3, t1, t3, tr1, tr2, tr3, m1, m2, m3, mo1, mo3, a1, a2, a3, ww1, ww3, f1, f3};
         Object[] arr2 = new Object[]{w1, w2, w3, t1, t2, t3, tr1, tr2, tr3, m1, m2, m3, mo1, mo2, mo3, f1, f2, f3};
 
         findLeastAndMostExpensiveAircraft(arr1);
         findLeastAndMostExpensiveAircraft(arr2);
+
+        System.out.println("\nExiting program");
+        System.exit(0);
     }
+    
+    /**
+     * 
+     * @param arr
+     */
 
     public static void findLeastAndMostExpensiveAircraft(Object[] arr){
         double highestPrice = -1000000;
-        System.out.println("Initialize highestPrice to " + highestPrice);
+        System.out.println("\nInitialize highestPrice to: \n" + highestPrice);
         double lowestPrice = 1000000000;
-        System.out.println("Initialize lowestPrice to " + highestPrice);
+        System.out.println("\nInitialize lowestPrice to: \n" + highestPrice);
 
         int mostExpensive = -1;
         int leastExpensive = -1;
         
         for(int i = 0; i < arr.length; i++){
             // check if Aircraft
-            System.out.println("Checking if object " + i + " is an aircraft.");
+            System.out.println("\nChecking if object " + i + " is an aircraft.");
             if(arr[i] instanceof Aircraft){
                 System.out.println("Object " + i + " is an aircraft.");
                 // create variable of type Aircraft
                 Aircraft aircraft = (Aircraft) arr[i];
                 
                 // check if most expensive 
-                System.out.println("Checking if price of aircraft " + i + " is higher than highest price so far...");
+                System.out.println("\nChecking if price of aircraft " + i + " is higher than highest price so far...");
                 if (aircraft.getPrice() > highestPrice) {
                     highestPrice = aircraft.getPrice();
                     System.out.println("Updating current highest price to: " + highestPrice);
@@ -119,7 +142,7 @@ public class Driver{
                 }
                 
                 // check if least expensive
-                System.out.println("Checking if price of aircraft " + i + " is lower than lowest price so far...");
+                System.out.println("\nChecking if price of aircraft " + i + " is lower than lowest price so far...");
                 if (aircraft.getPrice() < lowestPrice) {
                     lowestPrice = aircraft.getPrice();
                     System.out.println("Updating current lowest price to: " + lowestPrice);
@@ -137,15 +160,14 @@ public class Driver{
         if (mostExpensive != -1) {
             if (mostExpensive == leastExpensive) {
                 // if only one aircraft exists -> least and most expensive
-                System.out.println("Only one aircraft exists: " + arr[mostExpensive]);
+                System.out.println("\nOnly one aircraft exists. The details of this aircraft are: " + arr[mostExpensive]);
             } else {
-                System.out.println("Most Expensive aircraft is: " + arr[mostExpensive]);
-                System.out.println("Least expensive aircraft is: " + arr[leastExpensive]);
+                System.out.println("\nDetails of the most expensive aircraft: " + arr[mostExpensive]);
+                System.out.println("\nDetails of the least expensive aircraft is: " + arr[leastExpensive]);
             }
         } else {
             // if no aircrafts exist -> display message to that effect
-            System.out.println("No aircrafts");
+            System.out.println("\nNo aircrafts exists!");
         }
-
     }
 }
