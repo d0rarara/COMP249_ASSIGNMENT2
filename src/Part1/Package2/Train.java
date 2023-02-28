@@ -14,9 +14,9 @@ import Part1.Package1.WheeledTransportation;
  * @author  Dorcas
  */
 public class Train extends WheeledTransportation {
-    private int numVehicles;
-    private String startStation;
-    private String endStation;
+    protected int numVehicles;
+    protected String startStation;
+    protected String endStation;
 
     /**
      * Default constructor for objects of class Train
@@ -120,7 +120,7 @@ public class Train extends WheeledTransportation {
         if(numVehicles == 0){
             return "\nSince no train has been selected, the number of wheels, the maximum speed, and the number of venhicles \nare set to 0. Travelling does not occur.";
         }
-        return "\nThis train has " + getNumWheels() + " wheels, a maximum speed of " + getMaxSpeed() + " km/h, " + numVehicles + " vehicles, and travels from " + startStation + " \nto " + endStation + ".";
+        return "\nThis train has " + numWheels + " wheels, a maximum speed of " + maxSpeed + " km/h, " + numVehicles + " vehicles, and travels from " + startStation + " \nto " + endStation + ".";
     }
 
 

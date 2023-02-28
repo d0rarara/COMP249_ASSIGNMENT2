@@ -12,8 +12,8 @@ package Part1.Package1;
  * @author  Dorcas
  */
 public class WheeledTransportation {
-    private int numWheels;
-    private double maxSpeed;
+    protected int numWheels;
+    protected double maxSpeed;
 
     /**
      * Default constructor for objects of class WheeledTransportation
